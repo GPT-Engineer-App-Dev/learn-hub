@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import CodeMirror from "@uiw/react-codemirror";
+import { EditorView, basicSetup } from "@codemirror/basic-setup";
 import { javascript } from "@codemirror/lang-javascript";
 import { Box, Button, VStack } from "@chakra-ui/react";
 
@@ -21,7 +22,7 @@ const CodeEditor = () => {
         <CodeMirror
           value={code}
           height="200px"
-          extensions={[javascript()]}
+          extensions={[basicSetup, javascript()]}
           onChange={(value) => setCode(value)}
         />
       </Box>
