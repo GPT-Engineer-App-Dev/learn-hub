@@ -1,9 +1,12 @@
 import { Container, Text, VStack, Box, Heading, Button, Flex } from "@chakra-ui/react";
+import CodeEditor from '../components/CodeEditor';
 import { Link } from "react-router-dom";
 import { FaCode, FaLaptopCode, FaChalkboardTeacher } from "react-icons/fa";
-import CodeEditor from "../components/CodeEditor";
+import { useState } from 'react';
 
 const Index = () => {
+  const [code, setCode] = useState('// Write your code here');
+
   return (
     <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
       <VStack spacing={8}>
@@ -23,7 +26,7 @@ const Index = () => {
           <Button leftIcon={<FaChalkboardTeacher />} colorScheme="purple" size="lg">
             Meet Our Instructors
           </Button>
-          <CodeEditor />
+          <CodeEditor value={code} onChange={setCode} />
         </Flex>
       </VStack>
     </Container>
