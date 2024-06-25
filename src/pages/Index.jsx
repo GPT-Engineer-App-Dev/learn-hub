@@ -1,6 +1,7 @@
 import { Container, Text, VStack, Box, Heading, Button, Flex } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { FaCode, FaLaptopCode, FaChalkboardTeacher } from "react-icons/fa";
+import CodeEditor from "../components/CodeEditor";
 
 const Index = () => {
   return (
@@ -22,6 +23,7 @@ const Index = () => {
           <Button leftIcon={<FaChalkboardTeacher />} colorScheme="purple" size="lg">
             Meet Our Instructors
           </Button>
+          <CodeEditor />
         </Flex>
       </VStack>
     </Container>
