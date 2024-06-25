@@ -1,4 +1,5 @@
 import { Container, Text, VStack, Box, Heading, Button, Flex } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import { FaCode, FaLaptopCode, FaChalkboardTeacher } from "react-icons/fa";
 
 const Index = () => {
@@ -12,7 +13,7 @@ const Index = () => {
           Your ultimate platform to learn coding online. Start your journey with us today!
         </Text>
         <Flex direction="column" align="center" justify="center" width="100%">
-          <Button leftIcon={<FaCode />} colorScheme="teal" size="lg" mb={4}>
+          <Button as={Link} to="/course/1" leftIcon={<FaCode />} colorScheme="teal" size="lg" mb={4}>
             Start Learning
           </Button>
           <Button leftIcon={<FaLaptopCode />} colorScheme="blue" size="lg" mb={4}>
