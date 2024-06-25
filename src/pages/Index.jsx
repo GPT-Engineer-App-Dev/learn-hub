@@ -19,8 +19,11 @@ const Index = () => {
           <Button leftIcon={<FaLaptopCode />} colorScheme="blue" size="lg" mb={4}>
             Browse Courses
           </Button>
-          <Button leftIcon={<FaChalkboardTeacher />} colorScheme="purple" size="lg">
+          <Button leftIcon={<FaChalkboardTeacher />} colorScheme="purple" size="lg" mb={4}>
             Meet Our Instructors
+          </Button>
+          <Button as={Link} to="/code-editor" leftIcon={<FaCode />} colorScheme="green" size="lg">
+            Open Code Editor
           </Button>
         </Flex>
       </VStack>
